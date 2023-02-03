@@ -3,11 +3,10 @@ package com.example.customtablayout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager.widget.ViewPager
-import com.example.customtablayout.fragments.Education_fragment
+import com.example.customtablayout.fragments.EducationFragment
 import com.example.customtablayout.fragments.ViewPagerAdaptor
-import com.example.customtablayout.fragments.zodaic_fragment
+import com.example.customtablayout.fragments.ZodaicFragment
 import com.google.android.material.tabs.TabLayout
-import com.google.android.material.tabs.TabLayout.TabView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,12 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpTabs() {
         val adaptor = ViewPagerAdaptor(supportFragmentManager)
-        adaptor.addFragment(zodaic_fragment(), "Zodaic")
-        adaptor.addFragment(Education_fragment(), "Education")
-        adaptor.addFragment(zodaic_fragment(), "Zodaic")
-        adaptor.addFragment(Education_fragment(), "Education")
-        adaptor.addFragment(zodaic_fragment(), "Zodaic")
-        adaptor.addFragment(Education_fragment(), "Education")
+        adaptor.addFragment(ZodaicFragment(), "Zodaic")
+        adaptor.addFragment(EducationFragment(), "Education")
+        adaptor.addFragment(ZodaicFragment(), "Zodaic")
+        adaptor.addFragment(EducationFragment(), "Education")
+        adaptor.addFragment(ZodaicFragment(), "Zodaic")
+        adaptor.addFragment(EducationFragment(), "Education")
         val viewpager = findViewById<ViewPager>(R.id.viewpager)
         val tabs = findViewById<TabLayout>(R.id.tablayout)
         viewpager.adapter = adaptor
